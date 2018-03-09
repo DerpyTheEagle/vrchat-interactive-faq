@@ -1,0 +1,16 @@
+body {
+    overflow-y: scroll;
+}
+
+#explainationdiv {
+  text-align: center;
+  margin: 50px;
+}
+
+#explainationdiv h1 {
+  font-weight: 500;
+}
+
+#explainationdiv h5 {
+  color: #616161;
+}
