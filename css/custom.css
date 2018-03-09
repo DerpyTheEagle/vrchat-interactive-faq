@@ -2,6 +2,23 @@ body {
     overflow-y: scroll;
 }
 
+#nav-mobile li a {
+  font-size: 20px;
+}
+
+.collapsible-header {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.collapsible-header i {
+  font-size: 40px;
+}
+
+.collapsible-body span {
+  font-size: 20px;
+}
+
 #explainationdiv {
   text-align: center;
   margin: 50px;
