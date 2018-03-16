@@ -13,6 +13,7 @@
     </head>
 
     <body>
+      <img id="customcursor" src="css/cursor/arrow.png" />
       <nav>
         <div class="nav-wrapper blue darken-3">
           <a href="#" class="brand-logo" style="margin-left:10px;">DerpyEagle's Testing World</a>
@@ -72,5 +73,23 @@
       if upgrading, modify function accordionOpen in materialize.js to not close the accordion on second click
       -->
       <script type="text/javascript" src="js/materialize.js"></script>
+      <script>
+        $(document).mousemove(function(e){
+          $("#customcursor").css({left:e.pageX, top:e.pageY});
+        });
+
+        $("#customcursor").on('dragstart', function(event) { event.preventDefault(); });
+
+        $("a").on({
+          mouseenter: function () {
+              //stuff to do on mouse enter
+              $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+          },
+          mouseleave: function () {
+              //stuff to do on mouse leave
+              $("#customcursor").attr("src", "css/cursor/arrow.png");
+          }
+        });
+      </script>
     </body>
   </html>

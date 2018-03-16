@@ -13,6 +13,7 @@
     </head>
 
     <body>
+      <img id="customcursor" src="css/cursor/arrow.png" />
       <nav>
         <div class="nav-wrapper blue darken-3">
           <a href="#" class="brand-logo" style="margin-left:10px;">DerpyEagle's Testing World</a>
@@ -32,5 +33,23 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        $(document).mousemove(function(e){
+          $("#customcursor").css({left:e.pageX, top:e.pageY});
+        });
+
+        $("#customcursor").on('dragstart', function(event) { event.preventDefault(); });
+
+        $("a").on({
+          mouseenter: function () {
+              //stuff to do on mouse enter
+              $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+          },
+          mouseleave: function () {
+              //stuff to do on mouse leave
+              $("#customcursor").attr("src", "css/cursor/arrow.png");
+          }
+        });
+      </script>
     </body>
   </html>

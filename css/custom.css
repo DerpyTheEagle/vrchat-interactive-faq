@@ -1,5 +1,21 @@
 body {
     overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    cursor: none;
+}
+
+a {
+  cursor: none !important;
+}
+
+#customcursor {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  width: 64px;
+  height: 64px;
+  overflow: non-weighted;
 }
 
 #nav-mobile li a {
@@ -51,4 +67,5 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #333;
+    cursor: s-resize, auto;
 }
