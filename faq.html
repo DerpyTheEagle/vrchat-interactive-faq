@@ -90,6 +90,17 @@
               $("#customcursor").attr("src", "css/cursor/arrow.png");
           }
         });
+
+        $(".collapsible-header").on({
+          mouseenter: function () {
+              //stuff to do on mouse enter
+              $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+          },
+          mouseleave: function () {
+              //stuff to do on mouse leave
+              $("#customcursor").attr("src", "css/cursor/arrow.png");
+          }
+        });
       </script>
     </body>
   </html>
