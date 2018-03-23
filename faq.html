@@ -58,8 +58,8 @@
           <div class="collapsible-body"><span>I didn't make these models, so they're not mine to sell or redistribute in any way. Because of this, I cannot send anyone the completed models, either for money or for free. See "Did you make these?" for where you can find the original models from their original creator to rig them up yourself.</span></div>
         </li>
         <li>
-          <div class="waves-effect collapsible-header"><i class="material-icons">contacts</i>I have a question or need help with rigging the box models, or otherwise need to speak with you outside of VRChat. Can I contact you?</div>
-          <div class="collapsible-body"><span>Absolutely! I'm happy to help with any questions you may have regarding the box models, world building, or anything else that I can answer. Feel free to add me on Discord: <b>K-9#1205</b><br></span></div>
+          <div class="waves-effect collapsible-header"><i class="material-icons">contacts</i>What's your Discord?</div>
+          <div class="collapsible-body"><span>I'm happy to help with any questions you may have regarding the box models, world building, or anything else that I can answer. Feel free to add me on Discord: <b>K-9#1205</b><br>If you need Akash's Discord, that's: <b>Akash9933#7457</b></span></div>
         </li>
         <li>
           <div class="waves-effect collapsible-header"><i class="material-icons">filter_drama</i>Why do you use these models?</div>
@@ -84,25 +84,29 @@
 
         $("#customcursor").on('dragstart', function(event) { event.preventDefault(); });
 
+        function mouseGlowOn() {
+          $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+        }
+
+        function mouseGlowOff() {
+          $("#customcursor").attr("src", "css/cursor/arrow.png");
+        }
+
         $("a").on({
           mouseenter: function () {
-              //stuff to do on mouse enter
-              $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+              mouseGlowOn();
           },
           mouseleave: function () {
-              //stuff to do on mouse leave
-              $("#customcursor").attr("src", "css/cursor/arrow.png");
+              mouseGlowOff();
           }
         });
 
         $(".collapsible-header").on({
           mouseenter: function () {
-              //stuff to do on mouse enter
-              $("#customcursor").attr("src", "css/cursor/arrow_blue.png");
+              mouseGlowOn();
           },
           mouseleave: function () {
-              //stuff to do on mouse leave
-              $("#customcursor").attr("src", "css/cursor/arrow.png");
+              mouseGlowOff();
           }
         });
       </script>
